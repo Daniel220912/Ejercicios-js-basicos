@@ -5,14 +5,13 @@ const maxIntentos = 6;  //INTENTOS MAXIMOS
 let intentos = 0; //EMPEZAMOS POR 0 INTENTOS
 
 let acierto = false; //Bandera para saber si el jugador ha adivinado  //POR AHORA EL INTENTO ES FALSO, NO HEMOS ACERTADO
-debugger;
 //Miramos si cumple la condicion:
 //jugar mientras no hemos acertado y tenemos intentos
 while (intentos < maxIntentos && !acierto){ // INTENTOS: NUMEROS DE INTENTOS QUE LLEVO //MAXIMO DE INTENTOS  // ACIERTO: AUN NO HE ACERTADO
     let numeroJugador = parseInt(prompt("Introduce un numero entre 1 y 100"));
 // Si NO acierta damos ayuda al jugador de si es mayor o menor
 //Si acierta ha ganado
-if(numeroJugador === secretNumber){//SI
+if(numeroJugador === secretNumber){
     acierto=true;
 }else if(numeroJugador < secretNumber){
  alert("No llegas");
