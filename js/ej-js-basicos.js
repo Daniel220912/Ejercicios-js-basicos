@@ -70,23 +70,101 @@
 //modificar el codigo para permitir solo 3
 // intentos
 
-const pin = "1234";
-let respuesta = "";
-let intentos = 3;
+// const pin = "1234";
+// let respuesta = "";
+// let intentos = 3;
 
-while (respuesta !== pin && intentos > 0){
-    respuesta = prompt ("Escribe un pin");
-    intentos--;
-}
-if( respuesta === pin){
-    alert("Has acertado!!!");
-}else{
-alert("No tienes mas intentos");
-}
+// while (respuesta !== pin && intentos > 0){
+//     respuesta = prompt ("Escribe un pin");
+//     intentos--;
+// }
+// if( respuesta === pin){
+//     alert("Has acertado!!!");
+// }else{
+// alert("No tienes mas intentos");
+// }
 
 
 // 9- Escribe un programa que pida una frase y escriba cuántas veces aparece la letra "a".
+
+// const  frase = prompt ("Escribe una frase ");
+// let numAes = 0;
+// for(let i = 0; i < frase.length; i++){
+//     const letra = frase[i];
+//     if (letra === "a"){
+//         numAes++;
+//     }
+// }
+// alert (`La frase tiene ${numAes} aes`);
+
+
 // 10- Escribe un programa que pida una frase y escriba las vocales que aparecen.
+
+// const  frase = prompt ("Escribe una frase ");
+// let numVocales = 0;
+// const vocales = "aeiouAEIOU";
+
+// for (let i = 0; i < frase.length; i++) {
+//     for(let j = 0; j < vocales.length; j++) {
+//         if(frase[i] === vocales[j]) {
+//             numVocales++;
+//             break; //Cuando encuentre la vocal ya no comprobara las demas
+//         }       
+//     }
+// }
+// alert(`La frase tiene ${numVocales} vocales`);
+
+
+
+//  const  frase = prompt ("Escribe una frase ");
+//  let numVocales = 0;
+//  for(let i = 0; i < frase.length; i++) {
+//  const letra = frase [i];
+// //solo sumar si es a, e, i, o, u
+// switch(letra){
+//     case "a":
+//     case "e":
+//     case "i":
+//     case "o":
+//     case "u":
+//         numVocales++;
+//         break;
+// }
+// }
+
+
+
+//  for(let i = 0; i < frase.length; i++) {
+//     const letra = frase [i];
+//     //solo sumar si es a, e, i, o, u
+//     if(letra === "a" || letra === "e" || letra === "i"  || letra === "o" || letra === "u") 
+//         numVocales++;}
+
+
+
+//     }else if(letra === "e") {
+//         numVocales++
+//     }else if(letra === "i") {
+//         numVocales++
+//     }else if(letra === "o"){
+//         numVocales++
+//     }else if(letra === "u"){
+//         numVocales++
+//     }
+//  }
+//  alert(`La frase tiene ${numVocales} vocales`);
+
+
+const frase prompt = "ayer fue domingo";
+let numVocales = 0;
+const expVocal = /[aeiouAEIOU]/; //Uso de expresiones regulares en JS
+for (let i = 0; i < frase.length; i++) {
+    if(expVocal.test(frase [i])){
+        numVocales++;
+    }
+}
+alert(`La frase tiene ${numVocales} vocales`);
+
 // 11- Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son
 // vocales.
 // 12- Escribe un programa que pida una frase y escriba cuántas veces aparece cada una de
